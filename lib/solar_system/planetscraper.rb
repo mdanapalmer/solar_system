@@ -1,4 +1,5 @@
 class SolarSystem::Planetscraper
+	attr_accessor :name, :category, :description
 
 def scrape_sun
 doc = nil 
