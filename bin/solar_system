@@ -1,2 +1,5 @@
 #!/usr/bin/env ruby
-puts "Hello, Stargazer!"
+
+require_relative "../lib/solar_system.rb"
+
+SolarSystem::PlanetCLI.new.call

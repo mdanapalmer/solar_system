@@ -1,5 +1,6 @@
-require "solar_system/version"
+require 'open-uri'
+require 'nokogiri'
+#require 'pry'
 
-module SolarSystem
-  # Your code goes here...
-end
+require_relative "./solar_system/version"
+require_relative "./solar_system/planetcli"
