@@ -1,4 +1,5 @@
 class SolarSystem::Planetcli
+	attr_accessor :name, :category, :info
 	
 def call
 		puts "Hello, Stargazer!  Which stellar object would you like to learn about today?"
@@ -33,31 +34,27 @@ def call
 	def list
 	input = nil 
 	while input != "exit"
-	input = gets.strip
-
-	if input.to_i > 0
-		the_planet = @planet[input.to_i - 1]
-		puts "#{the_planet.name} - #{the_planet.category}: #{the_planet.description}"
+	if input 1
+	SolarSystem::Planet.scrape_object(input)
 	elsif input == "list"
 		list_info
 	elsif input == "back"
 		back
+	elsif input == "exit"
+		goodbye
 	else
 		puts "I'm sorry, I didn't understand that request. Please type back to view menu, 1 - 10 to choose object, or exit."
-		end
 	end
 end
 
+end
 
 def goodbye
 	puts "See you later, space cowboy!"
 end
 
 def back
-	puts "Choose 1 - 10"
+	puts "Please type back to view menu, 1 - 10 to choose object, or exit."
 	menu
 end
-
-
-
 end
